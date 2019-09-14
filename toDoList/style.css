@@ -2,3 +2,7 @@ ul li {
     color: darkgreen;
     font-weight: bold;
 }
+
+.removeBtn {
+    display: none;
+}
