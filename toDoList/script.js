@@ -6,7 +6,15 @@ var list = document.getElementById("list");
 
 
 
+
 addBtn.addEventListener("click", addItem);
+input.addEventListener('keypress', function(e) {
+    var key = e.keyCode;
+    if (key === 13) { // 13 is enter
+        addItem();
+    }
+});
+
 
 
 
@@ -31,6 +39,7 @@ function addItem() {
 
 
 
+
         nodeLi.appendChild(textnode);
         nodeLi.appendChild(button);
 
@@ -42,16 +51,25 @@ function addItem() {
 
         input.value = "";
 
+
     } else {
         alert("add some value!");
     }
 }
 
 
+var crossOut = document.querySelector('ul');
+crossOut.addEventListener('click', function(ev) {
+
+    if (ev.target.tagName === 'LI') {
+
+        ev.target.classList.toggle('crossOut');
+    }
+}, false);
+
+
+
+
 function removeItem() {
-
     this.parentElement.style.display = "none";
-
-
-
 }

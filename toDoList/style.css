@@ -1,8 +1,23 @@
 ul li {
     color: darkgreen;
     font-weight: bold;
+    font-size: 150%
+}
+
+ul li:hover {
+    color: rgb(3, 43, 3);
 }
 
 .removeBtn {
     margin-left: 5px;
+}
+
+.remove {
+    margin: 5px 0;
+    width: fit-content;
+}
+
+.crossOut {
+    text-decoration: line-through;
+    color: rgb(167, 165, 165);
 }
