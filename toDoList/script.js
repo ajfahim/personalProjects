@@ -1,7 +1,7 @@
 var input = document.querySelector("#input");
 var addBtn = document.querySelector("#addBtn");
-
 var list = document.getElementById("list");
+var button;
 
 
 
@@ -29,9 +29,10 @@ function addItem() {
         var textnode = document.createTextNode(input.value);
 
 
-        var button = document.createElement("input");
-        button.value = "remove";
+        button = document.createElement("input");
+        button.value = "\u00D7";
         button.setAttribute("type", "button");
+
 
 
         button.classList.add("removeBtn");
